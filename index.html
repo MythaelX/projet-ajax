@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <meta name="author" content="yohann DUMORTIER" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Title -->
+    <title>Photo</title>
+
+    <!-- Css Styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://getbootstrap.com/components/" rel="stylsheet" type="text/css"/>
+  </head>
+
+      <body>
+        <!-- Header -->
+        <div class="page-header container">
+          <h1>Photo<small>  gallery</small></h1>
+        </div>
+
+        <!-- Errors div -->
+        <div id="errors" class="container">
+        </div>
+
+        <!-- authentication -->
+        <div id="authentication" class="container" style="display: none">
+          <h2>Authentification</h2>
+          <form>
+              <div class="input-group">
+                  <span class="input-group-addon">Login</span>
+                  <input type="text" class="form-control" id="login" placeholder="Entrez votre login">
+              </div>
+              <div class="input-group">
+                  <span class="input-group-addon">Mot de passe</span>
+                  <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" required>
+              </div>
+              <br>
+              <button type="submit" class="btn btn-success pull-right" id="authentication-send">
+                  <span class="glyphicon glyphicon-ok"></span> Envoyer
+              </button>
+          </form>
+        </div>
+
+        <!-- colones -->
+        <div class="container">
+          <div class="col-md-8">
+            <div id="photos" class="panel panel-default" style="display: none">
+              <div class="panel-body">
+                <!-- thumbnails -->
+                <div id="thumbnails" >
+                </div>
+                <!-- photo -->
+                <div id="photo">
+                </div>
+              </div>
+            </div>
+
+            <!-- comments -->
+            <div id="comments">
+            </div>
+
+            <!-- comments-add -->
+
+            <div id="comments-add" style="display: none">
+              <form>
+                <div class="input-group">
+                  <span class="input-group-addon">Commentaire ></span>
+                  <input type="text" class="form-control" id="commentaires" placeholder="Entrez votre commentaire">
+                </div>
+                <br />
+                <button type="submit" class="btn btn-success pull-right" id="add-button">
+                  <span class="glyphicon glyphicon-send"></span> Envoyer
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- chat -->
+          <div id="chat" class="col-md-4" style="display: none">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Chat</h3>
+              </div>
+              <div class="panel-body">
+              <div id="chat-add">
+                <form>
+                  <textarea class="form-control" rows="10" id="chat-room" readonly></textarea>
+                  <div class="input-group">
+                    <span class="input-group-addon">Message></span>
+                    <input type="text" class="form-control" id="chat-message" placeholder="Entrez votre commentaire">
+                  </div>
+                  <br />
+                  <button type="submit" class="btn btn-success pull-right" id="chat-send">
+                    <span class="glyphicon glyphicon-send"></span> Envoyer
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- Js Scripts -->
+    <script src="js/ajax.js"></script>
+    <script src="js/authentification.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/js.cookie.js"></script>
+    <script src="js/loading.js"></script>
+  </body>
+</html>
